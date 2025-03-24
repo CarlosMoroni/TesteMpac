@@ -3,7 +3,7 @@ import './App.css'
 
 import ListagenVagas from './pages/ListagenVagas/ListagenVagas'
 import CadastroVagas from './pages/CadastroVagas/CadastroVagas'
-import Login from './pages/Login/Login'
+import LoginPage from './pages/LoginPage/LoginPage'
 import NotFound from './pages/NotFound/NotFound'
 import VisualizarVaga from './pages/VisualizarVaga/VisualizarVaga'
 
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<ListagenVagas/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
         <Route path="/cadastro-vagas" element={<CadastroVagas />}/>
         <Route path="/visualizar-vaga" element={<VisualizarVaga />}/>
         <Route path="*" element={<NotFound />} />
