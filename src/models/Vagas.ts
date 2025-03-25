@@ -1,5 +1,5 @@
 export type Vagas = {
-    id: number,
+    id?: number,
     company: string,
     link: string,
     location: string,

@@ -1,33 +1,40 @@
 import { useState } from "react";
 import { Usuario } from "../../models/Usuario";
 import { login } from "../../services/LoginService";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const [usuario, setUsuario] = useState<Usuario>({ email: "", password: "" });
+  const navigate = useNavigate();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUsuario({ ...usuario, [e.target.name]: e.target.value });
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    
+    setUsuario((prevUsuario) => ({
+      ...prevUsuario,
+      [name]: value,
+    }));
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  
+  const handleFormSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
     login(usuario);
+    navigate("/", { replace: true });
   };
 
   return (
     <section>
       <h1>Login</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="email">Usuario</label>
-          <input type="text" name="email" value={usuario.email} onChange={handleChange} required />
+          <input type="text" name="email" value={usuario.email} onChange={handleInputChange} required />
         </div>
 
         <div>
           <label htmlFor="password">senha</label>
-          <input type="password" name="password" value={usuario.password} onChange={handleChange} required />
+          <input type="password" name="password" value={usuario.password} onChange={handleInputChange} required />
         </div>
 
         <button type="submit">Entrar</button>
