@@ -18,13 +18,16 @@ function App() {
   return (
     <Router>
       <NavBarComponente />
-      <Routes>
-        <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/" element={<PrivateRoute element={<ListagenVagas/>}/>}/>
-        <Route path="/cadastro-vagas" element={<PrivateRoute element={<CadastroVagas />}/>}/>
-        <Route path="/visualizar-vaga" element={<PrivateRoute element={<VisualizarVaga />}/>}/>
-        <Route path="*" element={<PrivateRoute element={<NotFound />}/>} />
-      </Routes>
+
+      <main>
+        <Routes>
+          <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/" element={<PrivateRoute element={<ListagenVagas/>}/>}/>
+          <Route path="/cadastro-vagas" element={<PrivateRoute element={<CadastroVagas />}/>}/>
+          <Route path="/visualizar-vaga" element={<PrivateRoute element={<VisualizarVaga />}/>}/>
+          <Route path="*" element={<PrivateRoute element={<NotFound />}/>} />
+        </Routes>
+      </main>
     </Router>
   )
 }

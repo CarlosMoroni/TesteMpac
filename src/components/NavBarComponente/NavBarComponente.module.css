@@ -1,8 +1,11 @@
+.container {
+    background-color: var(--bg-color-light-secundario);
+}
+
 .container_nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-color-light-secundario);
     padding: .3em;
 }
 

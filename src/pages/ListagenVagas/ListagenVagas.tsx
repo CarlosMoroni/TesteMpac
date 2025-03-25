@@ -1,15 +1,12 @@
-import { VagasServices } from "../../services/VagasService";
+import ItemVagaComponent from '../../components/ItemVagaComponente/ItemVagaComponent';
+import styles from './ListagenVagas.module.css'
 
 function ListagenVagas() {
-    const teste = async () => {
-      const vagas = await VagasServices.getAllVagas();
-      console.log(vagas);
-    }
-
     return (
-        <section>
-            <h1>Bem-vindo à Página listagen de vagas!</h1>
-            <button type="button" onClick={teste}>teste</button>
+        <section className={styles.container}>
+            <h1>Vagas Disponiveis</h1>
+            
+            <ItemVagaComponent />
         </section>
     );
 }
