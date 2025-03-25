@@ -19,4 +19,5 @@ export const login = async(usuario: Usuario) => {
 
 export const logout = () => {
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("tokenExpiration");
 }
