@@ -6,10 +6,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg-color-light: #f3f5fb;
+  --bg-color-light-secundario: #fff;
+  --text-light: #272727;
+  --text-dark: #e7e7e7;
+  --mpac-primary-color: #912f30;
+  --mpac-primary-color-dark: #752627;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+h1, h2, label, p {
+  color: var(--text-light);
 }
