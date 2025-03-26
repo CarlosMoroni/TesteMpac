@@ -4,6 +4,8 @@ import { LoginService } from "../../services/LoginService";
 import { useNavigate } from "react-router-dom";
 import styles from './LoginPage.module.css'
 
+import logo_grande from '/public/mpac-logo.png'
+
 function LoginPage() {
   const [usuario, setUsuario] = useState<Usuario>({ email: "", password: "" });
   const navigate = useNavigate();
@@ -36,7 +38,7 @@ function LoginPage() {
   return (
     <section className={styles.container}>
       
-      <img src="/src/assets/mpac-logo.png" alt="logo ministerio publico do estado do acre" />
+      <img src={logo_grande} alt="logo ministerio publico do estado do acre" />
       
 
       <div className={styles.form_container}>

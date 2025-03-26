@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoLogOutOutline, IoAdd, IoListOutline, IoMenu } from "react-icons/io5";
 import styles from "./NavBarComponente.module.css";
+import logo from '/public/icon.svg'
 
 import { LoginService } from "../../services/LoginService";
 import { useState } from "react";
@@ -25,7 +26,7 @@ export default function NavBarComponente() {
       <nav className={styles.container_nav}>
 
         <Link to="/" className={styles.link_style}>
-          <img src="/public/icon.svg" alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
 
         <button
