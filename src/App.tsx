@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage/LoginPage'
 import NotFound from './pages/NotFound/NotFound'
 import VisualizarVaga from './pages/VisualizarVaga/VisualizarVaga'
 import NavBarComponente from './components/NavBarComponente/NavBarComponente'
+// import LoaderComponente from './components/LoaderComponente/LoaderComponente'
 
 const PrivateRoute = ({ element }: { element: JSX.Element }) => {
   return AuthService.isAuthenticated() ? element : <Navigate to="/login" replace />;
@@ -18,13 +19,14 @@ function App() {
   return (
     <Router>
       <NavBarComponente />
+      {/* <LoaderComponente/> */}
 
       <main>
         <Routes>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/" element={<PrivateRoute element={<ListagenVagas/>}/>}/>
-          <Route path="/cadastro-vagas" element={<PrivateRoute element={<CadastroVagas />}/>}/>
-          <Route path="/visualizar-vaga" element={<PrivateRoute element={<VisualizarVaga />}/>}/>
+          <Route path="/cadastro-vagas/:id?" element={<PrivateRoute element={<CadastroVagas />}/>}/>
+          <Route path="/visualizar-vaga/:id" element={<PrivateRoute element={<VisualizarVaga />}/>}/>
           <Route path="*" element={<PrivateRoute element={<NotFound />}/>} />
         </Routes>
       </main>
