@@ -45,6 +45,9 @@
 
 .header_container button {
     position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: 10px;
     top: 10px;
 }

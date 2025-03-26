@@ -1,5 +1,6 @@
 import axios from "axios";
 import { AuthInterceptor } from "../interceptors/authInterceptor";
+import validTokenInterceptor from "../interceptors/validTokenInterceptor";
 
 const api = axios.create({
     baseURL: "https://openingteste.mpac.mp.br/",
@@ -8,5 +9,6 @@ const api = axios.create({
     }
 });
 AuthInterceptor(api);
+validTokenInterceptor(api);
 
 export default api;
