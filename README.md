@@ -97,4 +97,6 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 # Protótipos
 <!-- gif de telas -->
+![AnimaçãoIphone](https://github.com/user-attachments/assets/553459ff-afe9-45a2-8efa-c0f9d43d7ac1)
+
 ![Animação](https://github.com/user-attachments/assets/1cbb5a16-937b-4ed2-b029-90220ba1476a)
