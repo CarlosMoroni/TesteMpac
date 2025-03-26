@@ -1,17 +1,13 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 
-interface LoaderContextData {
+interface LoaderContextType {
   loading: boolean;
   setLoading: (isLoading: boolean) => void;
 }
 
-interface LoaderProviderProps {
-  children: ReactNode;
-}
+const LoaderContext = createContext<LoaderContextType | null>(null);
 
-const LoaderContext = createContext<LoaderContextData | undefined>(undefined);
-
-export function LoaderProvider({ children }: LoaderProviderProps) {
+export const LoaderProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(false);
 
   return (
@@ -19,12 +15,12 @@ export function LoaderProvider({ children }: LoaderProviderProps) {
       {children}
     </LoaderContext.Provider>
   );
-}
+};
 
-export function useLoader(): LoaderContextData {
+export const useLoader = () => {
   const context = useContext(LoaderContext);
   if (!context) {
     throw new Error("useLoader deve ser usado dentro de um LoaderProvider");
   }
   return context;
-}
+};

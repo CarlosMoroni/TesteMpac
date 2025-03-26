@@ -147,7 +147,7 @@ function CadastroVagas() {
               }
             >
               <option value="true">Remoto</option>
-              <option value="false" selected>
+              <option value="false">
                 Presencial
               </option>
             </select>

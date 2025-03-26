@@ -4,6 +4,7 @@
 }
 
 .view_container div.container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -40,12 +41,17 @@
 
 .header_container {
     display: flex;
-    gap: 1em;
-    margin-left: -3em;
+}
+
+.header_container button {
+    position:absolute;
+    left: 10px;
+    top: 10px;
 }
 
 .header_container h1 {
     font-size: 26px;
+    margin-top: 1em;
 }
 
 .header_container button {

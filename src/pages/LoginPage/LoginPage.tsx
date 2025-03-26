@@ -35,6 +35,10 @@ function LoginPage() {
 
   return (
     <section className={styles.container}>
+      
+      <img src="/src/assets/mpac-logo.png" alt="logo ministerio publico do estado do acre" />
+      
+
       <div className={styles.form_container}>
         <h1>Login</h1>
 
