@@ -51,7 +51,7 @@ function LoginPage() {
           </div>
 
           <div className={styles.campo_form}> 
-            <label htmlFor="password">senha</label>
+            <label htmlFor="password">Senha</label>
             <input type="password" name="password" value={usuario.password} onChange={handleInputChange} required />
           </div>
 
