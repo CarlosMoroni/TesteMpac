@@ -89,10 +89,6 @@ O projeto se destaca pelos seguintes pontos:
 - **Responsividade**: Interface adaptável para diferentes dispositivos
 - **UX/UI aprimorado**: Design intuitivo e agradável para o usuário
 
-## 📜 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
 &nbsp;
 
 # Protótipos
